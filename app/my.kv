@@ -1,0 +1,21 @@
+BoxLayout:
+    orientation: 'vertical'
+    TextInput:
+        id: text_input
+        on_text: app.update_text(self.text)
+        font_size: '40sp'
+        size_hint_y: 2
+
+    Button:
+        text: 'Speak!'
+        font_size: '40sp'
+        on_press: app.speak()
+
+    MyLabel:
+        size_hint_y: 2
+
+<MyLabel@Label>:
+    text: app.text_input
+    font_size: '40sp'
+    color: app.label_color
+    markup: True
