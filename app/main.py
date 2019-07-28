@@ -15,7 +15,7 @@ class MyApp(App):
 
     def update_text(self, text_str):
         self.text_input = text_str
-        self.label_color = [random() for i in xrange(3)] + [1]
+        self.label_color = [random() for i in range(3)] + [1]
 
     def speak(self):
         tts.speak(self.text_input)
